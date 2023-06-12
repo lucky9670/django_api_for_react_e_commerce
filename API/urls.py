@@ -28,6 +28,7 @@ product_router.register(r'^product', ProductView, basename='maincat')
 
 urlpatterns = [
    path('', index, name="index"),
+   # API Portion
    re_path(r'^api/product_mcat/', include(main_cat_router.urls)),
    re_path(r'^api/product_cat/', include(cat_router.urls)),
    re_path(r'^api/main_product/', include(product_router.urls)),
